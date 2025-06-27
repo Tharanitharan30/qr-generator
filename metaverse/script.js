@@ -27,6 +27,6 @@ function downloadQR() {
     link.download = "qr_code.png";
     link.click();
   } else {
-    alert("Please generate the QR code first.");
+    alert("Please generate the QR Code first.");
   }
 }
