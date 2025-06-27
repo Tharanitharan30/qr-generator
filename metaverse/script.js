@@ -4,6 +4,7 @@ function generateQR() {
   const dark = document.getElementById("colorDark").value;
   const light = document.getElementById("colorLight").value;
   const container = document.getElementById("qrcode");
+  container.innerHTML="";
 
   if (text.trim() !== "") {
     new QRCode(container, {
