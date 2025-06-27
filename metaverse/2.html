@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stylish QR Generator</title>
+</head>
+<body>
+  <h2>Stylish QR Code Generator</h2>
+  <input type="text" id="qrText" placeholder="Enter text or URL">
+  <button onclick="generateQR()">Generate</button>
+  <div id="qr"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <script>
+    const qrCode = new QRCodeStyling({
+      width: 300,
+      height: 300,
+      type: "svg",
+      data: "https://example.com",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png", // optional logo
+      dotsOptions: {
+        color: "#000",
+        type: "rounded"
+      },
+      backgroundOptions: {
+        color: "#ffffff",
+      },
+      imageOptions: {
+        crossOrigin: "anonymous",
+        margin: 10
+      }
+    });
+
+    qrCode.append(document.getElementById("qr"));
+
+    function generateQR() {
+      const text = document.getElementById("qrText").value;
+      qrCode.update({
+        data: text
+      });
+    }
+  </script>
+</body>
+</html>
