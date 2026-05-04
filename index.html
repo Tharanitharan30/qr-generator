@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Smart QR Studio</span>
+                <h1>Build crisp QR codes with a cleaner, faster workflow.</h1>
+                <p>
+                    Generate branded QR codes for links, messages, contact details, and more with
+                    live controls and a polished preview panel.
+                </p>
+                <div class="hero-badges">
+                    <span>Fast setup</span>
+                    <span>Custom color</span>
+                    <span>Download ready</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <p class="hero-card-label">Best for</p>
+                <div class="hero-stats">
+                    <div>
+                        <strong>Web Links</strong>
+                        <span>Share landing pages instantly</span>
+                    </div>
+                    <div>
+                        <strong>Events</strong>
+                        <span>Tickets, invites, check-ins</span>
+                    </div>
+                    <div>
+                        <strong>Business</strong>
+                        <span>Menus, profiles, payment flows</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="generator-panel">
+                <div class="control-card">
+                    <div class="section-heading">
+                        <h2>Create Your Code</h2>
+                        <p>Paste content, tweak the style, and generate in one click.</p>
+                    </div>
+
+                    <label class="field-label" for="qr-input">Content</label>
+                    <textarea id="qr-input" placeholder="Enter text, URL, email, or phone number..."></textarea>
+
+                    <div class="quick-actions">
+                        <button class="chip-btn" type="button" data-template="https://yourbrand.com">Website</button>
+                        <button class="chip-btn" type="button" data-template="mailto:hello@yourbrand.com">Email</button>
+                        <button class="chip-btn" type="button" data-template="tel:+1234567890">Phone</button>
+                        <button class="chip-btn" type="button" data-template="Welcome to our event! Show this code at the desk.">Event Note</button>
+                    </div>
+
+                    <div class="controls-grid">
+                        <div class="field-group">
+                            <label class="field-label" for="qr-color">QR Color</label>
+                            <input type="color" id="qr-color" value="#0f172a">
+                        </div>
+
+                        <div class="field-group">
+                            <label class="field-label" for="qr-size">Size</label>
+                            <select id="qr-size">
+                                <option value="160">160 x 160</option>
+                                <option value="220" selected>220 x 220</option>
+                                <option value="300">300 x 300</option>
+                                <option value="420">420 x 420</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button id="generate-btn" class="primary-btn" type="button">Generate QR Code</button>
+                        <button id="download-btn" class="secondary-btn" type="button" disabled>Download PNG</button>
+                        <button id="reset-btn" class="ghost-btn" type="button">Reset</button>
+                    </div>
+
+                    <p id="status-message" class="status-message">Ready when you are.</p>
+                </div>
+
+                <div class="preview-column">
+                    <div class="preview-card">
+                        <div class="section-heading">
+                            <h2>Preview</h2>
+                            <p>See how your QR code will look before exporting it.</p>
+                        </div>
+
+                        <div id="qr-code" class="qr-stage">
+                            <div class="empty-state">
+                                <span class="empty-icon">+</span>
+                                <p>Your QR preview will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Live Details</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span>Content Type</span>
+                                <strong id="content-type">Text</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>Characters</span>
+                                <strong id="char-count">0</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>Export Size</span>
+                                <strong id="size-label">220 x 220</strong>
+                            </div>
+                            <div class="info-item">
+                                <span>Color</span>
+                                <strong id="color-label">#0F172A</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature-strip">
+                <article class="feature-tile">
+                    <h3>Quick Templates</h3>
+                    <p>Start with common QR use cases instead of typing from scratch every time.</p>
+                </article>
+                <article class="feature-tile">
+                    <h3>Live Metadata</h3>
+                    <p>Track content type, character count, and export settings at a glance.</p>
+                </article>
+                <article class="feature-tile">
+                    <h3>Cleaner Preview</h3>
+                    <p>Generate into a focused preview card designed for both mobile and desktop.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>QR Code Generator</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
