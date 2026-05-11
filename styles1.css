@@ -1,14 +1,14 @@
 :root {
-    --bg: #f7efe4;
-    --bg-accent: #f4c97b;
-    --surface: rgba(255, 255, 255, 0.72);
-    --surface-strong: #ffffff;
-    --text: #11203b;
-    --muted: #5f6c84;
-    --line: rgba(17, 32, 59, 0.12);
-    --primary: #d96c3f;
-    --primary-dark: #ba5630;
-    --shadow: 0 20px 60px rgba(17, 32, 59, 0.12);
+    --bg: #0b1220;
+    --bg-accent: #3dd9c5;
+    --surface: rgba(10, 19, 36, 0.7);
+    --surface-strong: rgba(17, 27, 49, 0.94);
+    --text: #ecf4ff;
+    --muted: #9fb1c9;
+    --line: rgba(161, 184, 211, 0.18);
+    --primary: #2dd4bf;
+    --primary-dark: #14b8a6;
+    --shadow: 0 28px 80px rgba(2, 8, 23, 0.34);
     --radius-xl: 28px;
     --radius-lg: 20px;
     --radius-md: 14px;
@@ -24,9 +24,10 @@ body {
     line-height: 1.6;
     color: var(--text);
     background:
-        radial-gradient(circle at top left, rgba(244, 201, 123, 0.55), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(217, 108, 63, 0.18), transparent 26%),
-        linear-gradient(135deg, #fff9f0 0%, #f8ecdf 45%, #f3e5d5 100%);
+        radial-gradient(circle at top left, rgba(45, 212, 191, 0.24), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(56, 189, 248, 0.22), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.18), transparent 30%),
+        linear-gradient(145deg, #08101d 0%, #111b31 42%, #0c1628 100%);
 }
 
 .page-shell {
@@ -58,7 +59,7 @@ footer {
 .feature-tile {
     background: var(--surface);
     backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(157, 181, 214, 0.12);
     box-shadow: var(--shadow);
     border-radius: var(--radius-xl);
 }
@@ -71,8 +72,8 @@ footer {
     display: inline-flex;
     padding: 8px 14px;
     border-radius: 999px;
-    background: rgba(217, 108, 63, 0.12);
-    color: var(--primary-dark);
+    background: rgba(45, 212, 191, 0.14);
+    color: #7ff4e6;
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -186,8 +187,9 @@ input[type="color"] {
     width: 100%;
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(12, 23, 42, 0.88);
     font: inherit;
+    color: var(--text);
 }
 
 textarea {
@@ -206,11 +208,16 @@ textarea {
 
 .chip-btn {
     border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(17, 27, 49, 0.9);
     color: var(--text);
     border-radius: 999px;
     padding: 10px 14px;
     font-weight: 600;
+}
+
+.chip-btn:hover,
+.ghost-btn:hover {
+    background: rgba(45, 212, 191, 0.1);
 }
 
 .controls-grid {
@@ -258,18 +265,18 @@ button:hover {
 }
 
 .primary-btn {
-    background: var(--primary);
-    color: #fff;
-    box-shadow: 0 12px 30px rgba(217, 108, 63, 0.3);
+    background: linear-gradient(135deg, #2dd4bf 0%, #22c55e 100%);
+    color: #06251f;
+    box-shadow: 0 14px 34px rgba(45, 212, 191, 0.28);
 }
 
 .primary-btn:hover {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, #24c4b1 0%, #18b45b 100%);
 }
 
 .secondary-btn {
-    background: #183153;
-    color: #fff;
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+    color: #eff8ff;
 }
 
 .ghost-btn {
@@ -295,9 +302,10 @@ button:disabled {
     margin-top: 20px;
     min-height: 340px;
     border-radius: 24px;
-    border: 1px dashed rgba(17, 32, 59, 0.18);
+    border: 1px dashed rgba(145, 185, 255, 0.22);
     background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 244, 0.86));
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 42%),
+        linear-gradient(145deg, rgba(10, 21, 39, 0.96), rgba(18, 33, 58, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,9 +318,9 @@ button:disabled {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
-    background: #fff;
+    background: #f8fbff;
     padding: 12px;
-    box-shadow: 0 20px 40px rgba(17, 32, 59, 0.12);
+    box-shadow: 0 20px 40px rgba(4, 10, 24, 0.32);
 }
 
 .empty-state {
@@ -327,8 +335,8 @@ button:disabled {
     display: grid;
     place-items: center;
     border-radius: 18px;
-    background: rgba(217, 108, 63, 0.12);
-    color: var(--primary-dark);
+    background: rgba(45, 212, 191, 0.14);
+    color: #7ff4e6;
     font-size: 1.8rem;
     font-weight: 800;
 }
@@ -343,7 +351,7 @@ button:disabled {
 .info-item {
     padding: 16px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(15, 25, 45, 0.88);
     border: 1px solid var(--line);
 }
 
